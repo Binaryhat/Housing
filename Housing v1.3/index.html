@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
 
+
+    <link rel="stylesheet" type="text/css" href="vendor/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="vendor/css/slick-theme.css"/>
+
+
+
     <!-- MAIN STYLE CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -516,24 +522,164 @@
                 <!-- bankoffers -->
                 <div id="bankoffers" class="section-layout">
                     <div class="element-title">
-                        
+                        <h3>Bank Offers</h3>
                     </div>
-                    <div class="elements"></div>
+                    <div class="elements ">
+                        <div class="bank-slider" >
+
+                            <div class="slider__item">
+                                <span ></span>
+                                <a href="">
+                                    <img class="img-responsive" src="img/bank/dhfl.jpg" alt="">
+                                </a>
+                                <span class="bank__interest">8.6% Floating</span>
+                            </div>
+
+                            <div class="slider__item">
+                                <span class="approved">Approved</span>
+                                <a href="">
+                                    <img class="img-responsive" src="img/bank/axis.jpg" alt="">
+                                </a>
+                                <span class="bank__interest">8.6% Floating</span>
+                            </div>
+
+                            <div class="slider__item">
+                                <span></span>
+                                <a href="">
+                                    <img class="img-responsive" src="img/bank/hdfc.jpg" alt="">
+                                </a>
+                                <span class="bank__interest">8.6% Floating</span>
+                            </div>
+
+                            <div class="slider__item">
+                                <span></span>
+                                <a href="">
+                                    <img class="img-responsive" src="img/bank/lic.jpg" alt="">
+                                </a>
+                                <span class="bank__interest">8.6% Floating</span>
+                            </div>
+
+                            <div class="slider__item">
+                                <span></span>
+                                <a href="">
+                                    <img class="img-responsive" src="img/bank/panjab.jpg" alt="">
+                                </a>
+                                <span class="bank__interest">8.6% Floating</span>
+                            </div>
+
+                            <div class="slider__item">
+                                <span></span>
+                                <a href="">
+                                    <img class="img-responsive" src="img/bank/dhfl.jpg" alt="">
+                                </a>
+                                <span class="bank__interest">8.6% Floating</span>
+                            </div>
+
+                            <div class="slider__item">
+                                <span></span>
+                                <a href="">
+                                    <img class="img-responsive" src="img/bank/axis.jpg" alt="">
+                                </a>
+                                <span class="bank__interest">8.6% Floating</span>
+                            </div>
+
+                            <div class="slider__item">
+                                <span></span>
+                                <a href="">
+                                    <img class="img-responsive" src="img/bank/dhfl.jpg" alt="">
+                                </a>
+                                <span class="bank__interest">8.6% Floating</span>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
 
                 <!-- emi -->
                 <div id="emi" class="section-layout">
-                    <div class="element-title"></div>
-                    <div class="elements"></div>
+                    <div class="element-title">
+                        <h3>EMI Calculater</h3>
+                    </div>
+                    <div class="elements">
+                        <div class="calculater">
+                            <h4>Easy Monthly Installments</h4>
+                            <div class="cal-row1">
+                                <div class="cost">
+                                    <label for="cost">Property Cost: <i class="fa fa-inr" aria-hidden="true"></i></label>
+                                    <input type="text"  id="cost" value="6293000" placeholder="" >
+                                </div>
+                                <div class="Down_payment">
+                                    <label for="Payment">Down Payment: </label>
+                                    <input type="text"  id="Payment" value="20" placeholder="" ><i class="fa fa-percent" aria-hidden="true"></i>
+                                </div>
+                            </div>
+
+                            <div class="cal-row2">
+                            <div class="Down_payment">
+                                <label for="Interest">Interest Rate: </label>
+                                <input type="text"  id="Interest" value="09.50" placeholder="" ><i class="fa fa-percent" aria-hidden="true"></i>
+                            </div>
+                                <div class="Down_payment">
+                                    <label for="Tenure">Loan Tenure: </label>
+                                    <input type="text"  id="Tenure" value="20" placeholder="" >Year
+                                </div>
+                            </div>
+
+                            <div class="cal-result">
+                                <div class="cost">
+                                    <span class="title">Property Cost</span>
+                                    <span class="value"><i class="fa fa-inr" aria-hidden="true"></i> 62.93 Lac</span>
+                                </div>
+                                <div class="payment">
+                                    <span class="title">Down Payment</span>
+                                    <span class="value"><i class="fa fa-inr" aria-hidden="true"></i> 12.59 Lac</span>
+                                </div>
+                                <div class="loan">
+                                    <span class="title">Loan Amount</span>
+                                    <span class="value"><i class="fa fa-inr" aria-hidden="true"></i> 50.34 Lac</span>
+                                </div>
+                                <div class="emi">
+                                    <span class="title">EMI</span>
+                                    <span class="value"><i class="fa fa-inr" aria-hidden="true"></i> 65.14 K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- builder -->
                 <div id="builder" class="section-layout">
-                    <div class="element-title"></div>
-                    <div class="elements"></div>
+                    <div class="element-title">
+                        <h3>Builder</h3>
+                    </div>
+                    <div class="elements">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="img/builder__img.jpg" alt="" class="builder__img img-responsive">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="builder__info">
+                                    <h3 class="builder-title">Amanora Park Town</h3>
+                                    <div class="project_status">
+                                        <div class="completed-projects">
+                                            <span class="label">Total Completed Projects</span>
+                                            <span class="value"> 5</span>
+                                        </div>
+                                        <div class="ongoing-projects">
+                                            <span class="label">Total ongoing Projects</span>
+                                            <span class="value"> 4</span>
+                                        </div>
+                                    </div>
+
+                                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium mollitia consequatur doloribus reiciendis nihil nesciunt possimus, culpa eum laudantium, fugiat molestias vitae doloremque repudiandae optio, quasi deserunt doloremque .</P>
+                                    <span class="read__more clearfix"><a href="#">Read more</a></span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
 
 
@@ -575,6 +721,40 @@
     </section>
      <!-- END All_DETAILS SECTION -->
 
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="img/helmet.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-info">
+                        <h2>Why <span class="red">Builders</span><span class="black">Time</span>.com?</h2>
+                        <p>Website made by Builders team to get true information & offers directly from Builders</p>  
+                        <p>Avoid cheating from brokers and 3rd party offers. Please talk to the builders only.</p>   
+                        <p class="quotes">"finally... the most enjoyable home search,... ever"</p>               
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer__nav">
+                        <ul class="">
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">ontact Us</a></li>
+                            <li><a href="">Terms</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                        </ul>
+                        <ul class="social">
+                            <li><a href="">Facebook</a></li>
+                            <li><a href="">Twitter</a></li>
+                            <li><a href="">Linked In</a></li>
+                            <li><a href="">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
+
 
 
 
@@ -583,11 +763,12 @@
 
     <!-- BOOTSTRAP JS -->
     <script src="vendor/js/bootstrap.min.js"></script>
-    <!-- OWL CAROUSEL JS  -->
+
+    <script type="text/javascript" src="vendor/js/slick.min.js"></script>
+
+
     <script src="vendor/js/sticky-kit.min.js"></script>
-    <script>
-       
-    </script>
+
    
     <script src="js/scripts.js"></script>
     <!-- GOOGLE MAPS SETTING JS -->
