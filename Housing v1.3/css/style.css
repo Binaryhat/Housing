@@ -301,6 +301,10 @@ ul.user-links i.fa-mobile {
   padding: 5px 0;
 }
 
+.image-gallery a.gallery-popup:hover {
+  cursor: zoom-in;
+}
+
 .image-gallery > :nth-child(1n) {
   padding-left: 5px;
   padding-right: 5px;
