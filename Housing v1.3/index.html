@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/css/slick-theme.css"/>
     <!-- MAGNIFIC CSS -->
     <link rel="stylesheet" href="vendor/css/magnific-popup.css">
+    <link rel="stylesheet" href="vendor/css/jquery-ui.css">
 
 
 
@@ -67,7 +68,9 @@
                                            </ul>
                                            <form class="navbar-form" role="search">
                                                 <div class="form-group">
-                                                    <input type="text" id="state_search" class="form-control has-search-icon" placeholder="Search Locality, Project or Builder">
+                                                    <a href="#" onclick= "openLocalityFilter()">
+                                                        <input type="text" id="state_search" class="form-control has-search-icon" placeholder="Search Locality, Project or Builder">
+                                                    </a>
                                                 </div>
                                             </form>
                                        </div>
@@ -729,6 +732,213 @@
     </section>
      <!-- END All_DETAILS SECTION -->
 
+     <!-- START FILTER WITH LOCALITIES -->
+    <div class="container">
+        <div class="filter-locality-overlay" id="filter-locality">
+            <a href="#" class="closeBtn" onclick="closeLocalityFilter()">&times;</a>
+            <div class="search-content-wrapper">
+                <div class="locality-selection">
+                    <div class="locality-selection-wrapper">
+
+                        <div class="search-city-selection">
+                            <span class="search-cs-header">We are in</span>
+                            <span class="search-dropdown"> <a href="#" class="search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pune <span class="caret"></span></a></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="searchbar-container">
+                                    <div class="tag-container filter-locality">
+                                        <span class="tag inline search-entity">
+                                            <span class="tag-label">pune</span>
+                                            <span class="tag-close">×</span>
+                                        </span>
+
+                                        <div class="tagger-input-container">
+                                            <input spellcheck="false" class="main-input" >
+                                        </div>
+                                    </div>
+                                    <div id="reset-tag" class="reset-preferences"><i class="fa fa-refresh" aria-hidden="true"></i><span class="reset-preference-text"> Reset</span></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn search-initiator-btn disabled ">View 700 Properties</button>
+                            </div>                        
+                            
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="sub-search">
+                                    <h4>Localities / project / builder</h4>
+                                    <input spellcheck="false" class="sub-search-input" placeholder="Search Locality or Project or Builder" ><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tag-filters" id="tag-filters">
+                            <div class="main-filter">
+                                <div class="property-type-filter">
+                                    <h3 class="h3-label">Property type</h3>
+                                    <div class="buy tag-team">
+                                        <div class="head">
+                                            <span class="tag  header active">
+                                                <span class="tag-label">Buy</span>
+                                            </span>
+                                        </div>
+                                        <div class="content">
+                                            <span class="tag inline">
+                                                <span class="tag-label">Appartment</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Row House</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Bungalow / villa</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Independent Floor</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Penthouse</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Studio</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Duplex</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Farm House</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Showroom / Shop</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Office</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Plot</span>
+                                            </span>
+                                        </div> 
+                                    </div>
+                                    <div class="rent tag-team">
+                                        <div class="head">
+                                            <span class="tag  header active">
+                                                <span class="tag-label">Rent</span>
+                                            </span>
+                                        </div>
+                                        <div class="content">
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Showroom / Shop</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Office</span>
+                                            </span>
+
+                                        </div>                          
+                                    </div>
+                                </div><!-- END of property-type-filter -->
+
+                                <div class="bhk-filter">
+                                    <h3 class="h3-label">BHK</h3>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">1 RK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">0.5 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">1 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">2 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">3 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">4 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">5 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">6 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">7 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">8 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">9 BHK</span>
+                                    </span>
+                                    <span class="tag inline ">
+                                        <span class="tag-label">10+ BHK</span>
+                                    </span>
+                                </div><!-- END of bhk-filter -->
+
+
+                                <div class="range-slider-container">
+                                    <p>
+                                      <label for="amount">BUDGET:</label>
+                                      <input type="text" id="amount" readonly style="border:0; color:#2dbe45; font-weight:bold;">
+                                    </p>
+                                    <div id="slider-range">
+                                        <ul class="breakpoints">
+                                            <li>0</li>
+                                            <li>50.0 Lacs</li>
+                                            <li>1.25 Cr</li>
+                                            <li>2.3 Cr</li>
+                                            <li>3.0 Cr</li>
+                                            <li>3.5 Cr</li>
+                                            <li>4.5 Cr</li>
+                                            <li>Any Value</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <div class="possession-filter">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h3 class="h3-label">Possession</h3>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Ready Possession</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">In 1 Year</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">In 2 Year</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">In 3 Year</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">Beyond 3 Year</span>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="img/Home-heart-logo.png" alt="Home Heart Logo" class="img-responsive">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+    </div>
+     <!-- END FILTER WITH LOCALITIES -->
+
+
+    <!-- START FOOTER -->
      <footer>
         <div class="container">
             <div class="row">
@@ -762,6 +972,7 @@
             </div>
         </div>
      </footer>
+     <!-- END FOOTER -->
 
 
 
@@ -778,6 +989,11 @@
     <script src="vendor/js/sticky-kit.min.js"></script>
     <!-- MAGNIFIC-POPUP JS -->
     <script src="vendor/js/jquery.magnific-popup.min.js"></script>
+    
+
+    <script src="vendor/js/jquery-ui.min.js"></script>
+
+
 
    
     <script src="js/scripts.js"></script>

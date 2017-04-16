@@ -1095,7 +1095,544 @@ footer .footer__nav ul a:hover {
 
 /*
 * ----------------------------------------------------------------------------------------
-* 03. Responsive css
+* 03. filter localities page
+* ----------------------------------------------------------------------------------------
+*/
+.apply-to-body {
+  overflow: hidden;
+}
+
+.filter-locality-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #fff;
+  overflow-x: hidden;
+  z-index: 1050;
+  transition: all 0.5s;
+}
+
+.filter-locality-overlay .closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 40px;
+  color: #999;
+  text-decoration: none;
+}
+
+.filter-locality-overlay .search-content-wrapper {
+  margin: 50px 100px;
+}
+
+.filter-locality-overlay .search-city-selection {
+  margin: 20px;
+}
+
+.filter-locality-overlay .search-city-selection span.search-cs-header {
+  display: inline-block;
+}
+
+.filter-locality-overlay .search-city-selection span.search-dropdown {
+  color: #777;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.filter-locality-overlay .search-city-selection span.search-dropdown a {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 12px;
+  color: #333;
+}
+
+.filter-locality-overlay .search-city-selection span.search-dropdown a:hover, .filter-locality-overlay .search-city-selection span.search-dropdown a:active {
+  text-decoration: none;
+}
+
+.filter-locality-overlay .searchbar-container {
+  position: relative;
+  width: 100%;
+  margin-right: 10px;
+  background-color: transparent;
+  cursor: text;
+  display: inline-block;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 8px;
+}
+
+.filter-locality-overlay .tagger-input-container {
+  height: 44px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.filter-locality-overlay .searchbar-container .tag-container {
+  width: 90%;
+  display: inline-block;
+}
+
+.filter-locality-overlay .tag-container {
+  padding: 3px;
+  line-height: 40px;
+}
+
+.filter-locality-overlay .searchbar-container {
+  position: relative;
+  width: 100%;
+  margin-right: 10px;
+  background-color: transparent;
+  cursor: text;
+  display: inline-block;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 8px;
+}
+
+.filter-locality-overlay .searchbar-container .main-input {
+  max-width: 760px;
+  position: absolute;
+  left: 0;
+  height: 44px;
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.filter-locality-overlay .tag-container .main-input {
+  margin: 2px 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+}
+
+.filter-locality-overlay .searchbar-container .tag {
+  position: relative;
+}
+
+.filter-locality-overlay .tag-container .tag {
+  font-size: 14px;
+  margin: 2px;
+  padding: 0 10px;
+  color: #fff;
+  border-radius: 30px;
+  height: 100%;
+  background-color: #31506d;
+}
+
+.filter-locality-overlay .tag-container .tag .tag-close {
+  cursor: pointer;
+}
+
+.filter-locality-overlay .tag-container .inline {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.filter-locality-overlay div.tag-container.filter-locality
+.tag-container {
+  padding: 3px;
+  line-height: 40px;
+}
+
+.filter-locality-overlay .reset-preferences {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  margin: 5px 12px;
+  position: absolute;
+  right: 0;
+  bottom: 12px;
+  text-transform: uppercase;
+}
+
+.filter-locality-overlay .reset-preferences i {
+  font-size: 18px;
+  padding-right: 20px;
+}
+
+.filter-locality-overlay .search-initiator-btn {
+  vertical-align: top;
+  transition: .5s all;
+  height: 50px;
+  width: 210px;
+  font-size: 14px;
+  border: none;
+  margin-top: 5px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.filter-locality-overlay .search-initiator-btn.disabled {
+  pointer-events: none;
+  color: #bbb;
+}
+
+.filter-locality-overlay .search-initiator-btn.active {
+  background-color: #2dbe45;
+  color: #fff;
+}
+
+.filter-locality-overlay .btn.disabled, .filter-locality-overlay .btn[disabled] {
+  background-color: #E6E6E6;
+  border: 1px solid #CDCDCD;
+  color: #999;
+  pointer-events: none;
+}
+
+.filter-locality-overlay .btn.secondary {
+  border: 1px solid #1DD38F;
+  background: #1DD38F;
+  color: #fff;
+}
+
+.sub-search {
+  width: 350px;
+  margin-top: 50px;
+  border-bottom: 1px solid #aaa;
+}
+
+.sub-search h4 {
+  text-decoration: uppercase;
+}
+
+.sub-search .sub-search-input {
+  width: 300px;
+  height: 44px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0;
+  border: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.sub-search .sub-search-input:focus {
+  outline: none;
+}
+
+.sub-search i {
+  color: #aaa;
+}
+
+.tag-filters {
+  padding-bottom: 40px;
+  margin: 40px auto;
+}
+
+.tag-filters .property-type-filter, .tag-filters .bhk-filter {
+  margin-bottom: 50px;
+}
+
+.tag-filters .tag-team {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tag-filters .tag {
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #fff;
+  color: #7f7f7f;
+  border: 1px solid #E6E6E6;
+  line-height: 30px;
+  padding: 3px 20px;
+  border-radius: 20px;
+}
+
+.tag-filters .tag .tag-label {
+  font-size: 12px;
+}
+
+.tag-filters .tag.header {
+  margin: 5px 30px 5px 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tag-filters .tag.header.active {
+  background-color: #f85956;
+}
+
+.tag-filters .tag.active {
+  border: none;
+  background-color: #31506d;
+  color: #fff;
+}
+
+.tag-filters .tag.active {
+  border: none;
+  background-color: #31506d;
+  color: #fff;
+}
+
+.tag-filters .inline {
+  margin: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tag-filters .h3-label {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 30px 0 15px;
+  margin-left: 0;
+  font-weight: 700;
+}
+
+.tag-filters {
+  padding-bottom: 40px;
+  margin: 40px auto;
+}
+
+.tag-filters .main-filter .range-slider-container {
+  margin: 50px auto;
+}
+
+.tag-filters .main-filter .breakpoints {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tag-filters .main-filter .breakpoints li {
+  font-size: 12px;
+  color: #333;
+  font-weight: 700;
+  position: absolute;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}
+
+.tag-filters .main-filter .breakpoints li:nth-child(1) {
+  left: 0%;
+}
+
+.tag-filters .main-filter .breakpoints li:nth-child(2) {
+  left: 10%;
+}
+
+.tag-filters .main-filter .breakpoints li:nth-child(3) {
+  left: 25%;
+}
+
+.tag-filters .main-filter .breakpoints li:nth-child(4) {
+  left: 46%;
+}
+
+.tag-filters .main-filter .breakpoints li:nth-child(5) {
+  left: 60%;
+}
+
+.tag-filters .main-filter .breakpoints li:nth-child(6) {
+  left: 70%;
+}
+
+.tag-filters .main-filter .breakpoints li:nth-child(7) {
+  left: 90%;
+}
+
+.tag-filters .main-filter .breakpoints li:nth-child(8) {
+  left: 100%;
+  font-size: 10px !important;
+}
+
+.possession-filter {
+  margin-top: 40px;
+}
+
+.possession-filter img {
+  margin-top: 10px;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03. Search result page
+* ----------------------------------------------------------------------------------------
+*/
+.result-container .result img.home-big-img {
+  margin: 20px 0;
+}
+
+.result-container .result .single-result {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 12px 4px #ccc;
+}
+
+.result-container .result .single-result figure {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.result-container .result .single-result figcaption {
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  display: block;
+  bottom: 5px;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  background-color: #f45961;
+  transition: background-color 0.3s ease;
+  line-height: 1.33em;
+}
+
+.result-container .result .single-result .fav-btn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+
+.result-container .result .single-result .fav-btn i {
+  color: #f45961;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #f45961;
+  background-color: #fff;
+}
+
+.result-container .result .single-result .title {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.result-container .result .single-result .sub-title {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #898788;
+}
+
+.result-container .result .single-result .price-group {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.result-container .result .single-result .price-group .new-price, .result-container .result .single-result .price-group .old-price {
+  display: block;
+  font-weight: 600;
+}
+
+.result-container .result .single-result .price-group .old-price {
+  font-size: 15px;
+}
+
+.result-container .result .single-result .emistart {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #9d35c8;
+}
+
+.result-container .result .single-result .emistart .price {
+  font-size: 14px;
+}
+
+.result-container .result .single-result .bhk {
+  font-size: 14px;
+}
+
+.result-container .result .single-result .bhk i {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.result-container .result .single-result .status-contact {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  font-size: 12px;
+}
+
+.result-container .result .single-result .status-contact .possession {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.result-container .result .single-result .status-contact .avg-rate {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.result-container .result .single-result .status-contact .contact {
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+}
+
+.result-container .result .single-result .status-contact .contact-button {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #9d35c8;
+  border: 1px solid #9d35c8;
+}
+
+.result-container .result .single-result .status-contact .value {
+  font-weight: 600;
+  display: block;
+}
+
+.result-container .result .single-result .status-contact .label {
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+  display: block;
+}
+
+.result-container .result .single-result .offer-status.well {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.result-container .result .single-result .offer-status .offer-icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  font-size: 36px;
+  margin-top: 5px;
+}
+
+.result-container .result .single-result .offer-status .offer-icon i {
+  margin-left: 10px;
+  color: #4c4a4b;
+}
+
+.result-container .result .single-result .offer-status .offer-icon.active i {
+  color: #f45961;
+}
+
+.result-container .result .single-result .offer-status .offer-text {
+  font-size: 14px;
+  line-height: 36px;
+}
+
+/*
+* ----------------------------------------------------------------------------------------
+* 04. Responsive css
 * ----------------------------------------------------------------------------------------
 */
 @media (max-width: 767px) {
