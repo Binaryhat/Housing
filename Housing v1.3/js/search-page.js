@@ -10,10 +10,76 @@ Version      : 1.0
 (function($) {
     "use strict";
 
+                /*
+             * ----------------------------------------------------------------------------------------
+             *  city-select
+             * ----------------------------------------------------------------------------------------
+             */
+
+             $(".search-dropdown").on('click','.search',function(){
+                $('body').toggleClass('city-select-on');
+                $('.city-search-panel').slideToggle( ); 
+
+                    // to close Locality filter
+                closeLocalityFilter();            
+
+             });
+             //close when click on close btn
+             $(".city-search-panel").on('click','.closeBtn',function(){
+                    $('body').removeClass('city-select-on');
+                     $('.city-search-panel').slideToggle( ); 
+             });
+
+             //to close city search when click on overlay
+             $(".city-select-overlay").on('click',function(){
+                $('body').toggleClass('city-select-on');
+                $('.city-search-panel').slideToggle( );             
+
+             });
+
+             //To set name of city in dropdown search buuton for both city and locality plus first search keyword
+             $("#txtAutoComplete").focusout(function(){
+                var cityname=$(this).val();
+                if(cityname !== ""){
+                    $(".search-dropdown .search").html(cityname +"<span class='caret'></span>");
+                    // $('body').toggleClass('city-select-on');
+                    // $('.city-search-panel').slideToggle( );  
+
+                    //add city to localityy filter
+                    $(".tag-container.filter-locality").html(
+                                                                    "<span class='tag inline search-entity my-city'>"+
+                                                                        "<span class='tag-label'>"+cityname+"</span>"+
+                                                                        "<span class='tag-close'> ×</span>"+
+                                                                    "</span>"
+                                                                    );
+                }
+                
+             });
+
+             // $(".search-input").on('focusin',function(){
+             //     $(".search-list ").addClass("open-list");
+             // });
+             // $(".search-input").on('focusout',function(){
+             //     $(".search-list ").removeClass("open-list");
+             // });
+
 
     /*==============================================================================
                           =          Locality filter          =
     =================================================================================*/
+
+    /*----------  subsearch locality  ----------*/
+        //open and close sub search
+        $(".sub-search").on("click",function(){
+            $(".sub-search").toggleClass("open-seach-list");
+        });
+
+        // to add active class after selection
+        $(".sub-search .autosuggest-list-container ").on("click",".item",function(){
+            $(".sub-search .autosuggest-list-container .item").removeClass("active");
+            $(this).addClass("active");
+
+        });
 
     /*----------  Range slider  ----------*/
 
@@ -45,7 +111,7 @@ Version      : 1.0
         }
     });
 
-
+//slider stop position
     $("#slider-range").slider({
         stop: function(event, ui) {
 
@@ -92,14 +158,14 @@ Version      : 1.0
 
 
 
-
+    // to create id dynamically for every keword
     $('#tag-filters span.tag.inline').each(function(index) {
         $(this).attr('id', "tag" + index);
 
     });
 
 
-
+ // to add keywords to the top search
     $('#tag-filters').on("click", "span.tag.inline", function(e) {
         var $this = $(this);
         $this.toggleClass("active");
@@ -118,6 +184,7 @@ Version      : 1.0
 
     });
 
+// close and remove active class when click on close button of key in searchbar
     $('.tag-container.filter-locality').on("click", ".tag-close", function(e) {
         var $this = $(this);
         var theid = "#" + $this.parent().attr("id");
@@ -127,6 +194,7 @@ Version      : 1.0
 
     });
 
+// to reset seach bar // remove all search keys
     $("#reset-tag").on("click", function() {
 
         $(".tag-container.filter-locality> span[id^='tag']").remove();

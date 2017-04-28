@@ -39,59 +39,82 @@
     <header id="home" class="welcome-area">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
-                
-                    
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                          </button>
-                          <a class="navbar-brand" href="#"><img src="img/logo.png" alt="S"></a>
-                        </div>
+                <!-- City Search -->
+                <div class="city-search-panel">
+                    <a href="#" class="closeBtn">&times;</a>
+                    <div class="city-select" data-reactid="2">
+                        <div class="header" data-reactid="3">
+                            <h2>Choose your city to start search</h2>
+                            <p class="sub-title">"Awesome buying experience... ever"</p>
 
-                    
-                    
+                            <div class="dropdown-select-container search-city-container focus mature">                             
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <input type="text" id="txtAutoComplete" class="search-input" placeholder="Type your City" list="cityList"/><!--your input city-->
+                                <datalist id="cityList">
+                                <option value="Mumbai" />
+                                <option value="Bengaluru" />
+                                <option value="Kolkata" />
+                                <option value="Chennai" />
+                                <option value="Hyderabad" />
+                                <option value="Pune" />
+                                <option value="Delhi" />
+                                <option value="Noida" />
+                                <option value="Gurgaon" />
+                                <option value="Faridabad" />
+                                <option value="Ghaziabad" />
+                                </datalist>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <div class="city-select-overlay" data-reactid="70"></div>
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="S"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <div class="row">
+                       <div class="col-md-9 nopadding" >
                            <div class="row">
-                               <div class="col-md-9 nopadding" >
-                                   <div class="row">
-                                       <div class="col-sm-12 search-group">
-                                           <ul class="nav navbar-nav navbar-left">                             
-                                             <li class="search-dropdown">
-                                               <a href="#" class="search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pune <span class="caret"></span></a>
-                                             </li>
-                                           </ul>
-                                           <form class="navbar-form" role="search">
-                                                <div class="form-group">
-                                                    <a href="#" onclick= "openLocalityFilter()">
-                                                        <input type="text" id="state_search" class="form-control has-search-icon" placeholder="Search Locality, Project or Builder">
-                                                    </a>
-                                                </div>
-                                            </form>
-                                       </div>
-                                       <div class="col-sm-12">
-                                           <div class="slogan "><h4>Dont Buy/Book property online, first Go for site visit.</h4></div>
-                                       </div>
-                                   </div>                                 
-                               </div>
-                               <div class="col-md-3 nopadding-right">
-                                   <ul class="nav navbar-nav user-links ">
-                                     <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i> +91 9028838220</a></li>
-                                     <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Account</a></li>
-                                     <li><a href="#"><i class="fa fa-heart" aria-hidden="true"><span class="count">10</span></i> My Shortlist</a></li>
-                                     <li><a href="#"><i class="fa fa-mobile" aria-hidden="true"></i> Download App</a></li>
+                               <div class="col-sm-12 search-group">
+                                   <ul class="nav navbar-nav navbar-left">                             
+                                     <li class="search-dropdown">
+                                       <a href="#" class="search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">City <span class="caret"></span></a>
+                                     </li>
                                    </ul>
+                                   <form class="navbar-form" role="search">
+                                        <div class="form-group">
+                                            <a href="#" onclick= "openLocalityFilter()">
+                                                <input type="text" id="state_search" class="form-control has-search-icon" placeholder="Search Locality, Project or Builder">
+                                            </a>
+                                        </div>
+                                    </form>
                                </div>
-                           </div>
-                          
-                         </div><!-- /.navbar-collapse -->     
-
-               
+                               <div class="col-sm-12">
+                                   <div class="slogan "><h4>Dont Buy/Book property online, first Go for site visit.</h4></div>
+                               </div>
+                           </div>                                 
+                       </div>
+                       <div class="col-md-3 nopadding-right">
+                           <ul class="nav navbar-nav user-links ">
+                             <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i> +91 9028838220</a></li>
+                             <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Account</a></li>
+                             <li><a href="#"><i class="fa fa-heart" aria-hidden="true"><span class="count">10</span></i> My Shortlist</a></li>
+                             <li><a href="#"><i class="fa fa-mobile" aria-hidden="true"></i> Download App</a></li>
+                           </ul>
+                       </div>
+                   </div>
+                  
+                 </div><!-- /.navbar-collapse -->  
             </div>  
         </nav>
     </header>
@@ -236,13 +259,13 @@
                 <!-- navigation -->
                 <div  class="detail-nav">
                     <ul>
-                        <li><a href="#overview">overview</a></li>
-                        <li><a href="#amenities">amenities</a></li>
-                        <li><a href="#floorplans">floorplans</a></li>
-                        <li><a href="#location">location</a></li>
-                        <li><a href="#bankoffers">bankoffers</a></li>
-                        <li><a href="#emi">emi</a></li>
-                        <li><a href="#builder">builder</a></li>
+                        <li><a class="smoth-scroll" href="#overview">overview</a></li>
+                        <li><a class="smoth-scroll" href="#amenities">amenities</a></li>
+                        <li><a class="smoth-scroll" href="#floorplans">floorplans</a></li>
+                        <li><a class="smoth-scroll" href="#location">location</a></li>
+                        <li><a class="smoth-scroll" href="#bankoffers">bankoffers</a></li>
+                        <li><a class="smoth-scroll" href="#emi">emi</a></li>
+                        <li><a class="smoth-scroll" href="#builder">builder</a></li>
                         <li class="Shortlist-add"><a  href="#"><i class="fa fa-heart" aria-hidden="true"></i>Add to Shortlist</a></li>
                     </ul>
                 </div>
@@ -742,17 +765,17 @@
 
                         <div class="search-city-selection">
                             <span class="search-cs-header">We are in</span>
-                            <span class="search-dropdown"> <a href="#" class="search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pune <span class="caret"></span></a></span>
+                            <span class="search-dropdown"> <a href="#" class="search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">City <span class="caret"></span></a></span>
                         </div>
 
                         <div class="row">
                             <div class="col-md-10">
                                 <div class="searchbar-container">
                                     <div class="tag-container filter-locality">
-                                        <span class="tag inline search-entity">
-                                            <span class="tag-label">pune</span>
+                                        <!--<span class="tag inline search-entity my-city">
+                                            <span class="tag-label">City</span>
                                             <span class="tag-close">×</span>
-                                        </span>
+                                        </span> -->
 
                                         <div class="tagger-input-container">
                                             <input spellcheck="false" class="main-input" >
@@ -762,172 +785,240 @@
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <button class="btn search-initiator-btn disabled ">View 700 Properties</button>
+                                <a href="search-result-page.html" class="btn search-initiator-btn disabled ">View 700 Properties</a>
                             </div>                        
                             
                         </div>
 
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="sub-search">
-                                    <h4>Localities / project / builder</h4>
-                                    <input spellcheck="false" class="sub-search-input" placeholder="Search Locality or Project or Builder" ><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                <div class="tag-filters" id="tag-filters">
+                                    <!-- sub-seach -->
+                                    <div class="sub-search">
+                                        <h4>Localities / project / builder</h4>
+                                        <input spellcheck="false" class="sub-search-input" placeholder="Search Locality or Project or Builder" ><i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+                                        <ul class="autosuggest-list-container">
+                                            <li class="category">
+                                                <div class="category-header">LOCALITIES</div>
+                                                <ul class="category-items">
+                                                    <li class="item">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">All</span>
+                                                        </span>                                                
+                                                    </li>
+                                                    <li class="item">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Wakad</span>
+                                                        </span> 
+                                                    </li>
+                                                    <li class="item">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">kharadi</span>
+                                                        </span> 
+                                                    </li>
+                                                    <li class="item">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Aundh</span>
+                                                        </span> 
+                                                    </li>
+                                                    <li class="item">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Chinchwad</span>
+                                                        </span> 
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="category">
+                                                <div class="category-header">PROJECTS</div>
+                                                <ul class="category-items">
+                                                    <li class="item">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label"> Shubhlaxmi Infrastructure &amp; Developers</span>
+                                                        </span> 
+                                                     </li>
+                                                    <li class="item ">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Saarrthi Group</span>
+                                                        </span> 
+                                                     </li>
+                                                </ul>
+                                            </li>
+                                            <li class="category">
+                                                <div class="category-header">BUILDER</div>
+                                                <ul class="category-items">
+                                                    <li class="item">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Marvel Claro</span>
+                                                        </span> 
+                                                     </li>                                    
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- sub-search END -->
+                                    <div class="main-filter"> 
+                                        <div class="property-type-filter">
+                                            <h3 class="h3-label">Property type</h3>
+                                            <div class="buy tag-team">
+                                                <div class="head">
+                                                    <span class="tag  header active">
+                                                        <span class="tag-label">Buy</span>
+                                                    </span>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="buy-flat">
+                                                        <span class="tag inline">
+                                                            <span class="tag-label">Appartment</span>
+                                                        </span>
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Row House</span>
+                                                        </span>
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Bungalow / villa</span>
+                                                        </span>
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Independent Floor</span>
+                                                        </span>
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Penthouse</span>
+                                                        </span>
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Studio</span>
+                                                        </span>
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Duplex</span>
+                                                        </span>
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Farm House</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="buy-land">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Showroom / Shop</span>
+                                                        </span>
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Office</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="buy-shop">
+                                                        <span class="tag inline ">
+                                                            <span class="tag-label">Plot</span>
+                                                        </span>
+                                                    </div>  
+                                                </div> 
+                                            </div>
+                                            <div class="rent tag-team">
+                                                <div class="head">
+                                                    <span class="tag  header active">
+                                                        <span class="tag-label">Rent</span>
+                                                    </span>
+                                                </div>
+                                                <div class="content">
+                                                    <span class="tag inline ">
+                                                        <span class="tag-label">Showroom / Shop</span>
+                                                    </span>
+                                                    <span class="tag inline ">
+                                                        <span class="tag-label">Office</span>
+                                                    </span>
+
+                                                </div>                          
+                                            </div>
+                                        </div><!-- END of property-type-filter -->
+
+                                        <div class="bhk-filter">
+                                            <h3 class="h3-label">BHK</h3>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">1 RK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">0.5 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">1 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">2 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">3 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">4 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">5 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">6 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">7 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">8 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">9 BHK</span>
+                                            </span>
+                                            <span class="tag inline ">
+                                                <span class="tag-label">10+ BHK</span>
+                                            </span>
+                                        </div><!-- END of bhk-filter -->
+
+
+                                        <div class="range-slider-container">
+                                            <p>
+                                              <label for="amount">BUDGET:</label>
+                                              <input type="text" id="amount" readonly style="border:0; color:#2dbe45; font-weight:bold;">
+                                            </p>
+                                            <div id="slider-range">
+                                                <ul class="breakpoints">
+                                                    <li>0</li>
+                                                    <li>50.0 Lacs</li>
+                                                    <li>1.25 Cr</li>
+                                                    <li>2.3 Cr</li>
+                                                    <li>3.0 Cr</li>
+                                                    <li>3.5 Cr</li>
+                                                    <li>4.5 Cr</li>
+                                                    <li>Any Value</li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="possession-filter">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <h3 class="h3-label">Possession</h3>
+                                                    <span class="tag inline ">
+                                                        <span class="tag-label">Ready Possession</span>
+                                                    </span>
+                                                    <span class="tag inline ">
+                                                        <span class="tag-label">In 1 Year</span>
+                                                    </span>
+                                                    <span class="tag inline ">
+                                                        <span class="tag-label">In 2 Year</span>
+                                                    </span>
+                                                    <span class="tag inline ">
+                                                        <span class="tag-label">In 3 Year</span>
+                                                    </span>
+                                                    <span class="tag inline ">
+                                                        <span class="tag-label">Beyond 3 Year</span>
+                                                    </span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="img/Home-heart-logo.png" alt="Home Heart Logo" class="img-responsive">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="tag-filters" id="tag-filters">
-                            <div class="main-filter">
-                                <div class="property-type-filter">
-                                    <h3 class="h3-label">Property type</h3>
-                                    <div class="buy tag-team">
-                                        <div class="head">
-                                            <span class="tag  header active">
-                                                <span class="tag-label">Buy</span>
-                                            </span>
-                                        </div>
-                                        <div class="content">
-                                            <span class="tag inline">
-                                                <span class="tag-label">Appartment</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Row House</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Bungalow / villa</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Independent Floor</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Penthouse</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Studio</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Duplex</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Farm House</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Showroom / Shop</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Office</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Plot</span>
-                                            </span>
-                                        </div> 
-                                    </div>
-                                    <div class="rent tag-team">
-                                        <div class="head">
-                                            <span class="tag  header active">
-                                                <span class="tag-label">Rent</span>
-                                            </span>
-                                        </div>
-                                        <div class="content">
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Showroom / Shop</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Office</span>
-                                            </span>
 
-                                        </div>                          
-                                    </div>
-                                </div><!-- END of property-type-filter -->
-
-                                <div class="bhk-filter">
-                                    <h3 class="h3-label">BHK</h3>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">1 RK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">0.5 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">1 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">2 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">3 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">4 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">5 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">6 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">7 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">8 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">9 BHK</span>
-                                    </span>
-                                    <span class="tag inline ">
-                                        <span class="tag-label">10+ BHK</span>
-                                    </span>
-                                </div><!-- END of bhk-filter -->
-
-
-                                <div class="range-slider-container">
-                                    <p>
-                                      <label for="amount">BUDGET:</label>
-                                      <input type="text" id="amount" readonly style="border:0; color:#2dbe45; font-weight:bold;">
-                                    </p>
-                                    <div id="slider-range">
-                                        <ul class="breakpoints">
-                                            <li>0</li>
-                                            <li>50.0 Lacs</li>
-                                            <li>1.25 Cr</li>
-                                            <li>2.3 Cr</li>
-                                            <li>3.0 Cr</li>
-                                            <li>3.5 Cr</li>
-                                            <li>4.5 Cr</li>
-                                            <li>Any Value</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-
-                                <div class="possession-filter">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <h3 class="h3-label">Possession</h3>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Ready Possession</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">In 1 Year</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">In 2 Year</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">In 3 Year</span>
-                                            </span>
-                                            <span class="tag inline ">
-                                                <span class="tag-label">Beyond 3 Year</span>
-                                            </span>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <img src="img/Home-heart-logo.png" alt="Home Heart Logo" class="img-responsive">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
@@ -997,6 +1088,7 @@
 
    
     <script src="js/scripts.js"></script>
+      <script src="js/search-page.js"></script>
     <!-- GOOGLE MAPS SETTING JS -->
     <script src="js/google-maps.js"></script>
     <!-- GOOGLE MAP LIABRARY CDN -->
