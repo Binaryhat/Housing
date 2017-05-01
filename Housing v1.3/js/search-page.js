@@ -10,7 +10,7 @@ Version      : 1.0
 (function($) {
     "use strict";
           
-            $("#filter-locality").css("height", "100%"); // temoerary for test
+           
 
 
  
@@ -70,7 +70,18 @@ Version      : 1.0
                      return this.value === val;        
                  }).length) {
                      $('body').toggleClass('city-select-on');
-                     $('.city-search-panel').slideToggle( );   
+                     $('.city-search-panel').slideToggle( );  
+
+                     // clear all keys from locality filter
+                     $(".tag-container.filter-locality> span[id^='tag']").remove();
+                     $("#tag-filters span.tag.inline.active").removeClass("active");
+                     $(".search-initiator-btn").removeClass("active");
+                     $(".search-initiator-btn").addClass("disabled"); 
+
+                     // clear disable class from buy selection
+                     $(".buy-flat").find(".tag.inline").removeClass("span-disable");
+                     $(".buy-shop").find(".tag.inline").removeClass("span-disable");
+                     $(".buy-land").find(".tag.inline").removeClass("span-disable");
                  }
              });
 
