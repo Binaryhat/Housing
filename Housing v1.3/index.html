@@ -33,7 +33,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="apply-to-body">
 
     <!-- START HOMEPAGE HEADER DESIGN AREA -->
     <header id="home" class="welcome-area">
@@ -763,31 +763,33 @@
                 <div class="locality-selection">
                     <div class="locality-selection-wrapper">
 
-                        <div class="search-city-selection">
-                            <span class="search-cs-header">We are in</span>
-                            <span class="search-dropdown"> <a href="#" class="search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">City <span class="caret"></span></a></span>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-10">
-                                <div class="searchbar-container">
-                                    <div class="tag-container filter-locality">
-                                        <!--<span class="tag inline search-entity my-city">
-                                            <span class="tag-label">City</span>
-                                            <span class="tag-close">×</span>
-                                        </span> -->
-
-                                        <div class="tagger-input-container">
-                                            <input spellcheck="false" class="main-input" >
-                                        </div>
-                                    </div>
-                                    <div id="reset-tag" class="reset-preferences"><i class="fa fa-refresh" aria-hidden="true"></i><span class="reset-preference-text"> Reset</span></div>
-                                </div>
+                        <div class="filter-header">                            
+                            <div class="search-city-selection">
+                                <span class="search-cs-header">We are in</span>
+                                <span class="search-dropdown"> <a href="#" class="search" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">City <span class="caret"></span></a></span>
                             </div>
-                            <div class="col-md-2">
-                                <a href="search-result-page.html" class="btn search-initiator-btn disabled ">View 700 Properties</a>
-                            </div>                        
-                            
+
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <div class="searchbar-container">
+                                        <div class="tag-container filter-locality">
+                                            <!--<span class="tag inline search-entity my-city">
+                                                <span class="tag-label">City</span>
+                                                <span class="tag-close">×</span>
+                                            </span> -->
+
+                                            <div class="tagger-input-container">
+                                                <input spellcheck="false" class="main-input" >
+                                            </div>
+                                        </div>
+                                        <div id="reset-tag" class="reset-preferences"><i class="fa fa-refresh" aria-hidden="true"></i><span class="reset-preference-text"> Reset</span></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <a href="search-result-page.html" class="btn search-initiator-btn disabled ">View 700 Properties</a>
+                                </div>                        
+                                
+                            </div>
                         </div>
 
                         <div class="row">
@@ -800,7 +802,7 @@
 
                                         <ul class="autosuggest-list-container">
                                             <li class="category">
-                                                <div class="category-header">LOCALITIES</div>
+                                                <div class="category-header" >LOCALITIES</div>
                                                 <ul class="category-items">
                                                     <li class="item">
                                                         <span class="tag inline ">
@@ -869,7 +871,7 @@
                                                 <div class="content">
                                                     <div class="buy-flat">
                                                         <span class="tag inline">
-                                                            <span class="tag-label">Appartment</span>
+                                                            <span class="tag-label" >Appartment</span>
                                                         </span>
                                                         <span class="tag inline ">
                                                             <span class="tag-label">Row House</span>
@@ -893,7 +895,7 @@
                                                             <span class="tag-label">Farm House</span>
                                                         </span>
                                                     </div>
-                                                    <div class="buy-land">
+                                                    <div class="buy-shop">
                                                         <span class="tag inline ">
                                                             <span class="tag-label">Showroom / Shop</span>
                                                         </span>
@@ -901,7 +903,7 @@
                                                             <span class="tag-label">Office</span>
                                                         </span>
                                                     </div>
-                                                    <div class="buy-shop">
+                                                    <div class="buy-land">
                                                         <span class="tag inline ">
                                                             <span class="tag-label">Plot</span>
                                                         </span>
@@ -914,7 +916,7 @@
                                                         <span class="tag-label">Rent</span>
                                                     </span>
                                                 </div>
-                                                <div class="content">
+                                                <div class="content rent-shop">
                                                     <span class="tag inline ">
                                                         <span class="tag-label">Showroom / Shop</span>
                                                     </span>
@@ -966,8 +968,52 @@
                                             </span>
                                         </div><!-- END of bhk-filter -->
 
+                                        <!-- BUY shop Land slider -->
+                                        <div id="buyShop-container"class="range-slider-container">
+                                            <p>
+                                              <label for="amount">SIZE:</label>
+                                              <input type="text" id="buyShop-amount" readonly style="border:0; color:#2dbe45; font-weight:bold;">
+                                            </p>
+                                            <div id="buyShop-slider-range">
+                                                <ul class="breakpoints">
+                                                    <li>0</li>
+                                                    <li>5000 sq.ft</li>
+                                                    <li>12500 sq.ft</li>
+                                                    <li>23000 sq.ft</li>
+                                                    <li>30000 sq.ft</li>
+                                                    <li>35000 sq.ft</li>
+                                                    <li>45000 sq.ft</li>
+                                                    
+                                                    <li>MAX</li>
+                                                </ul>
+                                            </div>
 
-                                        <div class="range-slider-container">
+                                        </div>
+
+                                        <!-- Rent shop Land slider -->
+                                        <div id="rentShop-container" class="range-slider-container">
+                                            <p>
+                                              <label for="amount">RENT:</label>
+                                              <input type="text" id="rentShop-amount" readonly style="border:0; color:#2dbe45; font-weight:bold;">
+                                            </p>
+                                            <div id="rentShop-slider-range">
+                                                <ul class="breakpoints">
+                                                    <li>0</li>
+                                                    <li>5 Lacs</li>
+                                                    <li>12.5 Lacs</li>
+                                                    <li>23 Lacs</li>
+                                                    <li>30 Lacs</li>
+                                                    <li>35 Lacs</li>
+                                                    <li>45 Lacs</li>
+                                                    
+                                                    <li>MAX</li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                    <!-- Budget filter -->
+                                        <div id="budget-container" class="range-slider-container">
                                             <p>
                                               <label for="amount">BUDGET:</label>
                                               <input type="text" id="amount" readonly style="border:0; color:#2dbe45; font-weight:bold;">
@@ -981,7 +1027,7 @@
                                                     <li>3.0 Cr</li>
                                                     <li>3.5 Cr</li>
                                                     <li>4.5 Cr</li>
-                                                    <li>Any Value</li>
+                                                    <li>MAX</li>
                                                 </ul>
                                             </div>
 

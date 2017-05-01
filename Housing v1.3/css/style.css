@@ -1231,6 +1231,13 @@ footer .footer__nav ul a:hover {
   overflow: hidden;
 }
 
+.tag-filters .main-filter .tag.span-disable {
+  pointer-events: none;
+  color: #d0c9c9;
+  cursor: not-allowed;
+  border: 1px solid #fdc8c8;
+}
+
 .filter-locality-overlay {
   position: fixed;
   bottom: 0;
@@ -1243,11 +1250,20 @@ footer .footer__nav ul a:hover {
   transition: all 0.5s;
 }
 
+.filter-locality-overlay .locality-selection-wrapper {
+  position: relative;
+}
+
+.filter-locality-overlay .filter-header {
+  background-color: #fff;
+  z-index: 1051;
+}
+
 .filter-locality-overlay .closeBtn {
   position: absolute;
   top: 20px;
   right: 50px;
-  font-size: 40px;
+  font-size: 30px;
   color: #999;
   text-decoration: none;
 }
@@ -1452,9 +1468,8 @@ footer .footer__nav ul a:hover {
 }
 
 .sub-search .autosuggest-list-container {
-  height: 0;
+  display: none;
   overflow: hidden;
-  transition: height 3s;
 }
 
 .sub-search .autosuggest-list-container, .sub-search .autosuggest-list-container ul {
@@ -1540,11 +1555,6 @@ footer .footer__nav ul a:hover {
   cursor: pointer;
 }
 
-.open-seach-list .autosuggest-list-container {
-  height: auto;
-  transition: height 3s;
-}
-
 .tag-filters {
   padding-bottom: 40px;
   margin: 40px auto;
@@ -1584,12 +1594,6 @@ footer .footer__nav ul a:hover {
   color: #fff;
 }
 
-.tag-filters .main-filter .tag.active {
-  border: none;
-  background-color: #31506d;
-  color: #fff;
-}
-
 .tag-filters .main-filter .inline {
   margin: 5px;
   display: inline-block;
@@ -1621,6 +1625,7 @@ footer .footer__nav ul a:hover {
 
 .tag-filters .main-filter .range-slider-container {
   margin: 50px auto;
+  padding-bottom: 50px;
 }
 
 .tag-filters .main-filter .breakpoints {
@@ -1677,6 +1682,10 @@ footer .footer__nav ul a:hover {
 
 .possession-filter img {
   margin-top: 10px;
+}
+
+#buyShop-container, #rentShop-container {
+  display: none;
 }
 
 /*
