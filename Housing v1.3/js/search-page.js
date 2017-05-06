@@ -165,7 +165,7 @@ Version      : 1.0
         var $this=$(this);
         var parent =$this.parent();
         var statusActive = $(parent).find(".tag.inline.active");
-        console.log(statusActive.length);
+        // console.log(statusActive.length);
         if(statusActive.length === 1 && $this.hasClass("active")){
             $(".buy-flat").find(".tag.inline").removeClass("span-disable");
             $(".buy-shop").find(".tag.inline").removeClass("span-disable");

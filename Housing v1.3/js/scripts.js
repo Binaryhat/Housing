@@ -13,7 +13,7 @@ Version      : 1.0
 	
 	var navOffset = $(".detail-nav").offset().top;
 
-	var secondNavFixedPos= $("nav.navbar").height() + 10;
+	var secondNavFixedPos= $("nav.navbar").height() +1;
 
 	      
 

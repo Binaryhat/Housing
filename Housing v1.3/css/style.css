@@ -107,19 +107,23 @@ body {
 .navbar-default {
   background-color: #fff;
   border-color: #e7e7e7;
-  padding-bottom: 10px;
   padding-top: 10px;
+  margin-bottom: 0px;
 }
 
 .navbar-default .navbar-nav > li.search-dropdown {
   color: #777;
   border: 1px solid #ccc;
-  margin-top: 8px;
+  height: 38px;
 }
 
 .navbar-default .navbar-nav > li.search-dropdown a {
   padding: 9px 30px;
   font-size: 14px;
+}
+
+.navbar-default .header-container {
+  padding-right: 0px;
 }
 
 body.city-select-on .city-select-overlay {
@@ -250,8 +254,7 @@ body.city-select-on .search-dropdown {
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand {
   position: absolute;
-  margin-left: -75px;
-  margin-top: 8px;
+  margin-left: -70px;
   padding: 0;
 }
 
@@ -262,13 +265,14 @@ body.city-select-on .search-dropdown {
   border: 1px solid #ccc;
   padding: 10px 30px;
   border-radius: 0;
-  height: 40px;
+  height: 38px;
   text-align: center;
 }
 
 .navbar-form {
   overflow: auto;
   padding-right: 0px;
+  margin-top: 0px;
 }
 
 .navbar-form .form-group {
@@ -284,13 +288,15 @@ body.city-select-on .search-dropdown {
   background-color: #444;
   width: 100%;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   margin-top: 5px;
 }
 
 .slogan h4 {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .navbar-nav > li > a {
@@ -303,7 +309,7 @@ ul.user-links {
 }
 
 ul.user-links li {
-  margin: 10px 0px;
+  margin: 5px 0px 20px 0px;
 }
 
 ul.user-links li:last-of-type {
@@ -345,20 +351,24 @@ ul.user-links i.fa-mobile {
 }
 
 .banner-container {
-  margin-top: 135px;
+  margin-top: 125px;
 }
 
 .banner-section .banner-info {
   background-color: #fff;
-  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 
 .info .small-img {
   vertical-align: middle;
+  margin-top: 5px;
+  border: 1px solid #EFE6E6;
 }
 
 .info h3 {
-  margin-top: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
   font-size: 20px;
   font-weight: 700;
 }
@@ -368,10 +378,10 @@ ul.user-links i.fa-mobile {
 }
 
 .info p.address {
-  font-size: 12px;
+  font-size: 13px;
   color: #2f2f2f;
   line-height: 24px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .info p.address i {
@@ -381,6 +391,7 @@ ul.user-links i.fa-mobile {
 .price {
   text-align: right;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 .price .new-price {
@@ -410,19 +421,22 @@ ul.user-links i.fa-mobile {
   margin-left: -60px;
 }
 
-.line-through {
+.line-through.old-price {
   color: #898989;
   text-decoration: line-through;
+  margin-left: 20px;
 }
 
 .offer {
-  margin-top: 5px;
+  margin: 7px 0px 9px 0px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .offer img {
-  margin-right: 5px;
+  height: 36px;
+  width: 36px;
+  margin-right: 10px;
 }
 
 .image-gallery {
@@ -434,31 +448,33 @@ ul.user-links i.fa-mobile {
   cursor: zoom-in;
 }
 
-.image-gallery > :nth-child(1n) {
-  padding-left: 5px;
-  padding-right: 5px;
+.image-gallery .left-img, .image-gallery .right-img {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #F0F0F0;
 }
 
-.image-gallery > :nth-child(2n) {
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
+.image-gallery .left-img {
+  height: 350px;
+  overflow: hidden;
 }
 
-.image-gallery > :nth-child(3n) {
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 0;
+.image-gallery .left-img img {
+  width: auto;
+}
+
+.image-gallery .right-img {
+  height: 175px;
+  overflow: hidden;
 }
 
 .image-gallery > :nth-child(3n) .item-overlay {
   position: absolute;
   text-align: center;
-  left: 5px;
   top: 0;
   height: 100%;
-  width: calc(100% - 10px);
-  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
   opacity: 1;
   transition: .3s;
 }
@@ -530,13 +546,20 @@ ul.user-links i.fa-mobile {
 
 .project-info .info-col {
   text-align: center;
-  padding: 20px;
-  border-right: 1px solid #ccc;
+  padding: 20px 0;
   font-size: 14px;
 }
 
 .project-info .info-col:last-of-type {
   border-right: none;
+}
+
+.project-info .avg-price, .project-info .size-detail, .project-info .possession-detail {
+  border-right: 1px solid #DFD6D6;
+}
+
+.project-info .possession-detail {
+  border-right: 0px solid #EFE6E6;
 }
 
 .project-info .subtitle {
@@ -564,13 +587,13 @@ ul.user-links i.fa-mobile {
 .add-section {
   width: 100%;
   height: auto;
-  margin: 10px;
+  margin: 15px;
 }
 
 /*----------  ALL details  ----------*/
 .detail-page .detail-nav {
   background-color: #fff;
-  margin-top: 5px;
+  margin-top: 10px;
   padding: 15px;
   z-index: 1029;
 }
@@ -627,7 +650,7 @@ ul.user-links i.fa-mobile {
 
 .section-layout {
   padding: 15px;
-  margin-top: 10px;
+  margin-top: 5px;
   background-color: #fff;
 }
 
@@ -1198,6 +1221,7 @@ footer .footer-info p.quotes {
 }
 
 footer .footer__nav {
+  margin-left: 10px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -1878,6 +1902,12 @@ footer .footer__nav ul a:hover {
     width: 1266px;
     padding-right: 50px;
     padding-left: 50px;
+  }
+  .header-container, .detail-container, .footer-container {
+    padding-right: 0px;
+  }
+  .banner-container {
+    padding-right: 0;
   }
   .result-container {
     width: 1330px;

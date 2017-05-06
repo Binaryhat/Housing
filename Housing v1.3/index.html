@@ -38,7 +38,7 @@
     <!-- START HOMEPAGE HEADER DESIGN AREA -->
     <header id="home" class="welcome-area">
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
+            <div class="container header-container">
                 <!-- City Search -->
                 <div class="city-search-panel">
                     <a href="#" class="closeBtn">&times;</a>
@@ -130,10 +130,10 @@
                     <div class="row banner-info">
                         <div class="col-md-8">
                             <div class="row info">
-                                <div class="col-xs-4">
-                                    <img src="http://placehold.it/200x150" alt="" class="small-img img-responsive">
+                                <div class="col-xs-3">
+                                    <img src="img/small_image.jpg" alt="" class="small-img img-responsive">
                                 </div>
-                                <div class="col-xs-8">
+                                <div class="col-xs-9">
                                     <h3>Adreno Towers</h3>
                                     <span>by Amanora Park Town</span>
                                     <p class="address">
@@ -148,10 +148,13 @@
                                 <i class="fa fa-inr" aria-hidden="true"></i>26.49 Lacs  - <i class="fa fa-inr" aria-hidden="true"></i>37.32 Lacs
                             </span>
                             <span class="old-price line-through">
-                                30.40 Lacs  -  40.50 Lacs
+                                30.40 Lacs  
+                            </span>
+                            <span class="old-price line-through">
+                                40.50 Lacs
                             </span>
                             <span class="note">
-                                <p>Base Price</p>
+                                <!-- <p>Base Price</p> -->
                                 <span class="status">Negotiable</span>
                             </span>
                         </div>
@@ -160,13 +163,13 @@
                     <!-- Offer -->
                     <div class="row">
                         <div class="col-md 12">
-                            <p class="offer"><img src="img/offer.png" alt="offer">Save up to 40 Lacs. 10% off</p>
+                            <p class="offer"><img src="img/Discount-icongreen.png" alt="offer">Save up to 40 Lacs. 10% off</p>
                         </div>
                     </div>
 
                     <!-- image gallery -->
                     <div class="row image-gallery">
-                        <div class="col-md-8 ">
+                        <div class="col-md-8 left-img">
                             <a href="img/image1.jpg" class="gallery-popup">
                                 <figure>                                
                                     <img src="img/image1.jpg" alt="" class="img-responsive ">
@@ -174,12 +177,12 @@
                                 </figure>
                             </a>    
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 hidden-sm right-img">
                             <a href="img/image2.jpg" class="gallery-popup">
                                 <img src="img/image2.jpg" alt="" class="img-responsive">
                             </a>    
                         </div>                        
-                        <div class="col-md-4 ">
+                        <div class="col-md-4 hidden-sm right-img">
                             <a href="img/image3.jpg" class="gallery-popup">
                                 <img src="img/image3.jpg" alt="" class="img-responsive ">
                                 <span class="item-overlay">
@@ -213,13 +216,17 @@
                             </div>
                         </div>
                         <div class="col-md-4 info-col">
-                            <div class="size">585 sqft - 2,100 sqft</div>
-                            <span class="subtitle">Size</span>
+                            <div class="size-detail">
+                                <div class="size">585 sqft - 2,100 sqft</div>
+                                <span class="subtitle">Size</span>                                
+                            </div>
 
                         </div>
                         <div class="col-md-4 info-col">
+                            <div class="possession-detail">
                             <div class="possession" >Under contruction</div>
-                            <span class="subtitle">Pssession</span>
+                            <span class="subtitle">Pssession</span>                                
+                            </div>
                         </div>
                     </div>
 
@@ -237,11 +244,11 @@
             <!-- ADD section -->
             <div class="col-md-3">
                 <div class="add-section">
-                    <img src="http://placehold.it/300X300" alt="" class="img-responsive">
+                    <img src="img/Ads.png" alt="" class="img-responsive">
                 </div>
 
                 <div class="add-section">
-                    <img src="http://placehold.it/300X300" alt="" class="img-responsive">
+                    <img src="img/Ads.png" alt="" class="img-responsive">
                 </div>
             </div>
         </div>
@@ -250,7 +257,7 @@
     <!-- END BANNER SECTION -->
     
     <!-- START All_DETAILS SECTION -->
-    <section class="container">
+    <section class="container detail-container">
         <div class="row all-detail">
 
             <!-- detail page -->
@@ -1077,7 +1084,7 @@
 
     <!-- START FOOTER -->
      <footer>
-        <div class="container">
+        <div class="container footer-container">
             <div class="row">
                 <div class="col-md-3">
                     <img src="img/helmet.png" alt="">
