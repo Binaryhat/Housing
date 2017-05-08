@@ -6,6 +6,12 @@ Template Name: Tichki - Onepage Creative Business Template
 Version      : 1.0                                          
 * ----------------------------------------------------------------------------------------
 */
+var sizeMin,
+    sizeMax,
+    rentMin,
+    rentMax,
+    budgetMin,
+    budgetMax;
 
 (function($) {
     "use strict";
@@ -217,6 +223,65 @@ Version      : 1.0
       });
 
 
+
+          /*----------  buyShop size Range slider  ----------*/
+
+          // Initialize Sliders
+          $("#buyShop-slider-range").slider({
+              range: true,
+              step: 50,
+              min: 0,
+              max: 50000,
+              values: [300, 50000],
+              slide: function(event, ui) {
+                  var minValue=ui.values[0] + " sq.ft";
+                  var maxValue =ui.values[1] + "  sq.ft";
+                  
+
+                  $("#buyShop-amount").val(minValue + " - " + maxValue); //
+
+
+              }
+          });
+
+      //buyShop size  slider stop position
+          $("#buyShop-slider-range").slider({
+              stop: function(event, ui) {
+
+                  var values = $("#buyShop-slider-range").slider("option", "values");
+                  var minValue=ui.values[0] + " sq.ft";
+                  var maxValue =ui.values[1] + "  sq.ft";
+
+                  // Size slider values for global variables
+                  sizeMin=minValue;
+                  sizeMax=maxValue;
+
+                 
+
+                  if (values[0] > 0 && values[1] === 50000) {
+                      $('.tag-container.filter-locality #flat-tag-range').remove();
+                      $('.tag-container.filter-locality')
+                          .append(' <span id="buyShop-tag-range" class="tag inline active"><span class="tag-label">min ' + minValue + '</span> <span class="tag-close">×</span></span>');
+
+                  }
+                  if (values[0] === 0 && values[1] < 50000) {
+                      $('.tag-container.filter-locality #buyShop-tag-range').remove();
+                      $('.tag-container.filter-locality')
+                          .append(' <span id="buyShop-tag-range" class="tag inline active"><span class="tag-label">max ' + maxValue + '</span> <span class="tag-close">×</span></span>');
+                  }
+                  if (values[0] > 0 && values[1] < 50000) {
+                      $('.tag-container.filter-locality #buyShop-tag-range').remove();
+                      $('.tag-container.filter-locality')
+                          .append(' <span id="buyShop-tag-range" class="tag inline active"><span class="tag-label">Between ' + minValue + ' and ' + maxValue + '</span> <span class="tag-close">×</span></span>');
+                  }
+                  if (values[0] === 0 && values[1] === 50000) {
+                      $('.tag-container.filter-locality #buyShop-tag-range').remove();
+                  }
+
+              }
+          });
+
+
           /*----------  Rent shop slider  ----------*/
 
           // Initialize Sliders
@@ -247,13 +312,15 @@ Version      : 1.0
               }
           });
 
-      //slider stop position
+      //Rent slider stop position
           $("#rentShop-slider-range").slider({
               stop: function(event, ui) {
 
                   var values = $("#rentShop-slider-range").slider("option", "values");
                   var minValue,
                       maxValue;
+
+    
                   if (values[0] > 99) {
                       minValue = (values[0] / 100) + " Lacs";
                   } else {
@@ -265,6 +332,10 @@ Version      : 1.0
                   } else {
                       maxValue = values[1] + " K";
                   }
+
+                  // Rent slider values for global variables
+                  rentMin=minValue;
+                  rentMax=maxValue;
 
                   if (values[0] > 0 && values[1] === 5000) {
                       $('.tag-container.filter-locality #rentShop-tag-range').remove();
@@ -288,6 +359,7 @@ Version      : 1.0
 
               }
           });
+    
     /*----------  Budget Range slider  ----------*/
 
     // Initialize Sliders
@@ -318,13 +390,16 @@ Version      : 1.0
         }
     });
 
-//slider stop position
+    //Budget slider stop position
     $("#slider-range").slider({
         stop: function(event, ui) {
 
             var values = $("#slider-range").slider("option", "values");
             var minValue,
                 maxValue;
+
+
+                
             if (values[0] > 99) {
                 minValue = (values[0] / 100) + " Cr";
             } else {
@@ -336,6 +411,10 @@ Version      : 1.0
             } else {
                 maxValue = values[1] + " Lacs";
             }
+
+            // Rent slider values for global variables
+            budgetMin=minValue;
+            budgetMax=maxValue;
 
             if (values[0] > 0 && values[1] === 500) {
                 $('.tag-container.filter-locality #tag-range').remove();
@@ -360,56 +439,7 @@ Version      : 1.0
         }
     });
 
-        /*----------  buyShop Range slider  ----------*/
-
-        // Initialize Sliders
-        $("#buyShop-slider-range").slider({
-            range: true,
-            step: 50,
-            min: 0,
-            max: 50000,
-            values: [300, 50000],
-            slide: function(event, ui) {
-                var minValue=ui.values[0] + " sq.ft";
-                var maxValue =ui.values[1] + "  sq.ft";
-                
-
-                $("#buyShop-amount").val(minValue + " - " + maxValue); //
-
-
-            }
-        });
-
-    //buyShop  slider stop position
-        $("#buyShop-slider-range").slider({
-            stop: function(event, ui) {
-
-                var values = $("#buyShop-slider-range").slider("option", "values");
-                var minValue=ui.values[0] + " sq.ft";
-                var maxValue =ui.values[1] + "  sq.ft";
-
-                if (values[0] > 0 && values[1] === 50000) {
-                    $('.tag-container.filter-locality #flat-tag-range').remove();
-                    $('.tag-container.filter-locality')
-                        .append(' <span id="buyShop-tag-range" class="tag inline active"><span class="tag-label">min ' + minValue + '</span> <span class="tag-close">×</span></span>');
-
-                }
-                if (values[0] === 0 && values[1] < 50000) {
-                    $('.tag-container.filter-locality #buyShop-tag-range').remove();
-                    $('.tag-container.filter-locality')
-                        .append(' <span id="buyShop-tag-range" class="tag inline active"><span class="tag-label">max ' + maxValue + '</span> <span class="tag-close">×</span></span>');
-                }
-                if (values[0] > 0 && values[1] < 50000) {
-                    $('.tag-container.filter-locality #buyShop-tag-range').remove();
-                    $('.tag-container.filter-locality')
-                        .append(' <span id="buyShop-tag-range" class="tag inline active"><span class="tag-label">Between ' + minValue + ' and ' + maxValue + '</span> <span class="tag-close">×</span></span>');
-                }
-                if (values[0] === 0 && values[1] === 50000) {
-                    $('.tag-container.filter-locality #buyShop-tag-range').remove();
-                }
-
-            }
-        });
+       
 
 
 
