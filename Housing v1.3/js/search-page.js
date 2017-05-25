@@ -176,6 +176,7 @@ var sizeMin,
             $(".buy-flat").find(".tag.inline").removeClass("span-disable");
             $(".buy-shop").find(".tag.inline").removeClass("span-disable");
             $(".buy-land").find(".tag.inline").removeClass("span-disable");
+            $(".rent .rent-shop").find(".tag.inline").removeClass("span-disable");
 
             $("#buyShop-container").slideUp();
         }else{
@@ -183,25 +184,26 @@ var sizeMin,
                 
                 $(".buy-shop").find(".tag.inline").addClass("span-disable");
                 $(".buy-land").find(".tag.inline").addClass("span-disable");
+                $(".rent .rent-shop").find(".tag.inline").addClass("span-disable");
             }
             else if(parent.attr('class')==="buy-shop"){
                 $("#buyShop-container").slideDown();
                 $("#budget-container").slideDown();
                 $(".buy-flat").find(".tag.inline").addClass("span-disable");
                 $(".buy-land").find(".tag.inline").addClass("span-disable");
+                $(".rent .rent-shop").find(".tag.inline").addClass("span-disable");
             }
             else if(parent.attr('class')==="buy-land"){
                 $("#buyShop-container").slideDown();
                 $("#budget-container").slideDown();
                 $(".buy-shop").find(".tag.inline").addClass("span-disable");
                 $(".buy-flat").find(".tag.inline").addClass("span-disable");
+                $(".rent .rent-shop").find(".tag.inline").addClass("span-disable");
             }
-        }
-
-        
-
-       
+        }   
       });
+
+      /*----------  Rent filters  ----------*/
 
       $(".rent").on("click",".tag.inline",function(){
         var $this=$(this);
@@ -209,12 +211,19 @@ var sizeMin,
         var statusActive = $(parent).find(".tag.inline.active");
         console.log(statusActive.length);
         if(statusActive.length === 1 && $this.hasClass("active")){
+          $(".buy-flat").find(".tag.inline").removeClass("span-disable");
+          $(".buy-shop").find(".tag.inline").removeClass("span-disable");
+          $(".buy-land").find(".tag.inline").removeClass("span-disable");         
 
             $("#buyShop-container").slideUp();
             $("#rentShop-container").slideUp();
             $("#budget-container").slideDown();
 
         }else{
+            $(".buy-flat").find(".tag.inline").addClass("span-disable");
+            $(".buy-shop").find(".tag.inline").addClass("span-disable");
+            $(".buy-land").find(".tag.inline").addClass("span-disable");  
+
            $("#buyShop-container").slideDown();
            $("#rentShop-container").slideDown();
            $("#budget-container").slideUp();

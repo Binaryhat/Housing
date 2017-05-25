@@ -67,7 +67,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="S"></a>
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="S">
+                        <span class="logotext">
+                            <span class="red">B</span><span class="black">T</span>
+                        </span>
+                    </a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -110,15 +114,25 @@
     </header>
     <!-- END HOMEPAGE HEADER DESIGN AREA -->
     <!-- START BANNER SECTION -->
+
     <section class="container result-container banner-container">
+
+
         <div class="row">
             <div class="col-md-9 nopadding">
+                <div class="form-inline sortby">
+                    <label for="sortBy">Sort By:</label>
+                    <select class="form-control frm-dropdown" id="sortBy">
+                        <option>Relevance</option>
+                        <option>Relevance1</option>
+                    </select>
+                </div>
                 <div class="result">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 nopadding-right  ">
                             <div class="single-result">
                                 <figure>
-                                    <img src="img/image4.jpg" alt="" class="img-responsive ">
+                                    <img src="img/result-img.jpg" alt="" class="img-responsive ">
                                     <figcaption>Sinhagad Road, pune</figcaption>
                                 </figure>
                                 <a href="#" class="fav-btn">
@@ -130,8 +144,10 @@
                                     <span class="new-price">
                                         <i class="fa fa-inr" aria-hidden="true"></i>26.49 Lacs  - <i class="fa fa-inr" aria-hidden="true"></i>37.32 Lacs
                                     </span>
-                                    <span class="old-price line-through">
-                                        30.40 Lacs  -  40.50 Lacs
+                                    <span class="old-price ">
+                                        <span class="line-through">30.40 Lacs</span>   
+                                        -
+                                        <span class="line-through">40.50 Lacs</span>
                                     </span>
                                 </div>
                                 <div class="emistart">
@@ -173,10 +189,10 @@
                             <!-- End of single result -->
                         </div>
                         <!-- End of result -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 nopadding-right  ">
                             <div class="single-result">
                                 <figure>
-                                    <img src="img/image4.jpg" alt="" class="img-responsive ">
+                                    <img src="img/result-img.jpg" alt="" class="img-responsive ">
                                     <figcaption>Sinhagad Road, pune</figcaption>
                                 </figure>
                                 <a href="#" class="fav-btn">
@@ -235,16 +251,16 @@
                         </div>
                     </div>
                     <!-- Result row ended -->
-                    <row>
+                    <div class="row">
                         <div class="col-md-12 nopadding">
                             <img src="img/Home-big-img.jpg" alt="" class="img-responsive home-big-img">
                         </div>
-                    </row>
+                    </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 nopadding-right  ">
                             <div class="single-result">
                                 <figure>
-                                    <img src="img/image4.jpg" alt="" class="img-responsive ">
+                                    <img src="img/result-img.jpg" alt="" class="img-responsive ">
                                     <figcaption>Sinhagad Road, pune</figcaption>
                                 </figure>
                                 <a href="#" class="fav-btn">
@@ -298,10 +314,10 @@
                             </div>
                             <!-- End of single result -->
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 nopadding-right  ">
                             <div class="single-result">
                                 <figure>
-                                    <img src="img/image4.jpg" alt="" class="img-responsive ">
+                                    <img src="img/result-img.jpg" alt="" class="img-responsive ">
                                     <figcaption>Sinhagad Road, pune</figcaption>
                                 </figure>
                                 <a href="#" class="fav-btn">
@@ -365,13 +381,14 @@
             </div>
             <!-- ADD section -->
             <div class="col-md-3">
-                <!-- Builder Form -->
-                <div class="builder-form result-page">
+
+                <!-- Builder Form btn-->
+                <div id="result-builder" class="builder-form-btn result-page">
                     <div class="form-header">
                         <h5>Fill form and get info of Perfect Builders</h5>
-                        <a href="" class="btn btn-default builder-btn">Didn't find your project?</a>
+                        <a href="#" id="builderForm" class="btn btn-default builder-btn" >Didn't find your project?</a>
                     </div>
-                </div>       
+                </div>          
                 <div class="add-section">
                     <img src="img/Ads.png" alt="" class="img-responsive">
                 </div>
@@ -541,7 +558,7 @@
                                                         <span class="tag-label">Rent</span>
                                                     </span>
                                                 </div>
-                                                <div class="content">
+                                                <div class="content rent-shop">
                                                     <span class="tag inline ">
                                                         <span class="tag-label">Showroom / Shop</span>
                                                     </span>
@@ -700,6 +717,511 @@
 
     </div>
      <!-- END FILTER WITH LOCALITIES -->
+
+     <!-- Start Builder form -->
+      <div class="builder-form-page">
+          <div class="container form-main-container">
+             <a href="#" class="closeBtn">&times;</a>
+              <div class="row">
+                  <div class="col-md-8">
+                      <div class="form-header">
+                          <h3>Thank you for choosing <span>Builders</span>Time !</h3>
+                          <p class="sub">Hire us... <span>& you will fall in love with us!</span></p>
+                      </div>
+
+                      <ul class="form-progressbar">
+                          <li class="basic active">Basic Details</li>
+                          <li class="property">Property Details</li>
+                          <li class="features">Features</li>
+                          <li class="location">Location</li>
+                          <li class="submit">Submit</li>
+                      </ul>                  
+                          
+                      
+                      <div class="form-body">
+                          <form role="form" action="" method="post" class="builders-form">
+                              <fieldset class="basic">
+                                  <h3 class="note-warning">Brokers strictly not allowed to post property.</h3>
+                                  <div class="form-group">                                
+                                      <div>
+                                          <label for="projectList">List Project as:</label>
+                                          <select class="form-control frm-dropdown" id="projectList">
+                                              <option>Normal Project</option>
+                                              <option>2vbbv</option>
+                                          </select>
+                                      </div>
+
+                                      <div>   
+                                          <label for="propertyFor">List Project/Property for:</label>
+                                          <select class="form-control frm-dropdown" id="propertyFor">
+                                              <option>Sale</option>
+                                              <option>Rent</option>
+                                          </select>
+                                      </div>
+
+
+                                      <div class="form-inline">
+                                          <label for="builderName">Builder Name: </label>
+                                          <input type="text" class="form-control" id="builderName">
+                                      </div>
+                                      
+                                      <div class="form-inline">
+                                          <label for="companyLogo">ADD Company Logo:</label>  
+                                          <div class="upload-img">
+                                               
+                                              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                              <input type="file" class="form-control img-uploader" id="companyLogo" onchange="readImagURL(this)" >
+                                              <div id="image-container"> </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-inline">
+                                          <label for="projectrName">Project Name: </label>
+                                          <input type="text" class="form-control" id="projectrName">
+                                      </div>
+                                      
+       
+
+                                      <div class="form-inline">
+                                          <label for="projectLogo">ADD Project Logo :</label>  
+                                          <div class="upload-img">
+                                               
+                                              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                              <input type="file" class="form-control img-uploader" id="projectLogo" onchange="readImagURL(this)" >
+                                              <div id="image-container"> </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="form-inline">
+                                          <label for="credaiMember">Credai Membership:</label>
+                                          <select class="form-control frm-dropdown" id="credaiMember">
+                                              <option>Yes</option>
+                                              <option>No</option>
+                                          </select>
+                                      </div>
+
+
+                                      <div class="form-inline">
+                                          <label for="cityLocality">Project City and Locality: </label>
+                                          <input type="text" class="form-control" id="cityLocality">
+                                          <span class="nextline-example">eg. Mumbai,Bandara <br>Mumbai,Juhu</span>
+                                      </div>
+
+                                      <div class="form-inline">
+                                          <label for="projectOffer">Any Offer on Project:</label>
+                                          <select class="form-control frm-dropdown" id="projectOffer">
+                                              <option>Yes</option>
+                                              <option>No</option>
+                                          </select>  
+                                          <span class="inline-example">eg. Pay 1% of Total price and book the Flat</span>
+                                      </div>
+
+                                      <div class="form-inline">
+                                          <label for="projectConfig">Project Configuaration: </label>
+                                          <input type="text" class="form-control" id="projectConfig">
+                                          <span class="nextline-example">eg. 1,2 BHK Apartment & 3 BHK Row House...</span>
+                                      </div>
+
+                                      <div class="form-inline">
+                                          <label for="possession">Possession:</label>
+                                          <select class="form-control frm-dropdown" id="possession">
+                                              <option>1yr</option>
+                                              <option>2yr</option>
+                                          </select>
+                                      </div>
+
+                                      <Label>Project Overview:</Label>
+                                      <div class="projectOrview">  
+                                                                           
+                                          <div class="OVform-inline">
+                                              <label for="towers">No. of Towers: </label>
+                                              <input type="text" class="form-control" id="towers">
+                                              <span>eg.8</span>
+                                          </div>
+                                          <div class="OVform-inline">
+                                              <label for="floors">No. of Floors: </label>
+                                              <input type="text" class="form-control" id="floors">
+                                              <span>eg.12</span>
+                                          </div>
+                                          <div class="OVform-inline">
+                                              <label for="units">No. of Units: </label>
+                                              <input type="text" class="form-control" id="units">
+                                              <span>eg.1250</span>
+                                          </div>
+                                          <div class="OVform-inline">
+                                              <label for="area">Total Project Area: </label>
+                                              <input type="text" class="form-control" id="area">
+                                              <span>eg.10 Acres</span>
+                                          </div>
+                                          <div class="OVform-inline">
+                                              <label for="launchDate">Project Launch Date: </label>
+                                              <input type="text" class="form-control" id="launchDate">
+                                              <span>eg.June 2015</span>
+                                          </div>
+
+                                          <label class="textarea-label">Write Project Overview(Write about only Project Not about Builder/company) : </label>
+                                          <textarea name="overviewDetails" id="" cols="75" rows="9"></textarea>
+
+                                      </div>
+
+                                      <Label>Add project Photos with tagline:</Label>
+                                      <div class="project-photo-slider" id="photo-slider">
+                                          
+                                          <div class="project-photo-with-tag">
+                                              <div class="project-photo-uploader">
+                                                  <input type="file" class="form-control" >
+                                                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                  <span>+Add photo</span>
+                                              </div>
+                                              <input type="text" class="photo-tag">
+                                          </div>
+
+                                          <div class="project-photo-with-tag">
+                                              <div class="project-photo-uploader">
+                                                  <input type="file" class="form-control" >
+                                                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                  <span>+Add photo</span>
+                                              </div>
+                                              <input type="text" class="photo-tag">
+                                          </div>
+
+                                          <div class="project-photo-with-tag">
+                                              <div class="project-photo-uploader">
+                                                  <input type="file" class="form-control" >
+                                                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                  <span>+Add photo</span>
+                                              </div>
+                                              <input type="text" class="photo-tag">
+                                          </div>
+                                          <div class="project-photo-with-tag">
+                                              <div class="project-photo-uploader">
+                                                  <input type="file" class="form-control" >
+                                                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                  <span>+Add photo</span>
+                                              </div>
+                                              <input type="text" class="photo-tag">
+                                          </div>
+                                          <div class="project-photo-with-tag">
+                                              <div class="project-photo-uploader">
+                                                  <input type="file" class="form-control" >
+                                                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                  <span>+Add photo</span>
+                                              </div>
+                                              <input type="text" class="photo-tag">
+                                          </div>
+                                          <div class="project-photo-with-tag">
+                                              <div class="project-photo-uploader">
+                                                  <input type="file" class="form-control" >
+                                                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                  <span>+Add photo</span>
+                                              </div>
+                                              <input type="text" class="photo-tag">
+                                          </div>
+                                      </div>
+                                      <span class="nextline-example">eg.Project elevation. Property Layout. Building Photo etc</span>
+      
+                                  </div>
+                                  <button type="button" class="btn btn-next pull-right">Next &#62;</button>                            
+                              </fieldset>
+
+
+                              <!-- second page -->
+
+                              <fieldset class="property">
+                                  <div class="form-group">
+                                      <div class="form-inline">
+                                          <label for="negotiable">Property price Negotiable:</label>
+                                          <select class="form-control frm-dropdown" id="negotiable">
+                                              <option>Yes</option>
+                                              <option>No</option>
+                                          </select>
+                                      </div>
+                                      <div class="form-inline">
+                                          <label for="unitSizeIn">All Property Unit Size mention in:</label>
+                                          <select class="form-control frm-dropdown" id="unitSizeIn">
+                                              <option>.</option>
+                                              <option>.</option>
+                                          </select>
+                                      </div>
+
+                                      <h4>Add all property units one by one...</h4>
+                                      
+                                      <div class="property-units">
+                                          <div class="form-inline">
+                                              <label for="propertyType">Property type:</label>
+                                              <select class="form-control frm-dropdown" id="propertyType">
+                                                  <option>.</option>
+                                                  <option>.</option>
+                                              </select>
+                                          </div>
+                                          <div class="form-inline">
+                                              <label for="confirmation">Confirmation:</label>
+                                              <select class="form-control frm-dropdown" id="confirmation">
+                                                  <option>.</option>
+                                                  <option>.</option>
+                                              </select>
+                                          </div>
+
+                                          <div class="form-inline">
+                                              <label for="size">size: </label>
+                                              <input type="text" class="form-control small-text" id="size">
+                                              <span>SQ.FT eg.1000</span>
+                                          </div>
+
+                                          <div class="form-inline">
+                                              <label for="addRoomDetail">Addition room details: </label>
+                                              <input type="text" class="form-control" id="addRoomDetail">
+                                              <span class="nextline-example">eg. Puja room, Servant room...etc</span>
+                                          </div>
+
+                                          <div class="form-inline">
+                                              <label for="unitPrice">Unit Price:</label>
+                                              <select class="form-control frm-dropdown" id="unitPrice">
+                                                  <option>.</option>
+                                                  <option>.</option>
+                                              </select>
+                                          </div>
+
+                                          <div class="form-inline">
+                                              <label for="sqftPrice">Per/sq.ft Price: </label>
+                                              <input type="text" class="form-control small-text" id="sqftPrice">
+                                              <span>sq.ft</span>
+                                          </div>
+
+                                          <div class="floor-plan-img">
+                                              <label for="">Add floor Plan image:</label>
+                                              <p  class="text-center d-quotes">You can add 2D or 3D or both floor plan</p>
+                                              <div class="floor-image">
+                                                  <div class="2d">
+                                                      <label for="">2D Plan Image</label>
+                                                       <div class="project-photo-with-tag">
+                                                           <div class="project-photo-uploader">
+                                                               <input type="file" class="form-control" >
+                                                               <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                               <span>+Add photo</span>
+                                                           </div>
+                                                           <input type="text" class="photo-tag">
+                                                       </div>               
+                                                  </div>
+                                                  <div class="3d">
+                                                      <label for="">3D Plan Image</label>
+                                                       <div class="project-photo-with-tag">
+                                                           <div class="project-photo-uploader">
+                                                               <input type="file" class="form-control" >
+                                                               <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                               <span>+Add photo</span>
+                                                           </div>
+                                                           <input type="text" class="photo-tag">
+                                                       </div>                                                                    
+                                                  </div>                                                
+                                              </div>
+                                              <span class="nextline-example">eg.Ground floor</span>
+                                              <div class="form-inline">
+                                                  <label for="addAnotherFloor">Want to ADD another floor Plan image in the same unit:</label>
+                                                  <select class="form-control frm-dropdown" id="addAnotherFloor">
+                                                      <option>Yes</option>
+                                                      <option>No</option>
+                                                  </select>
+                                                  <span class="nextline-example ">eg.First floor...</span>
+                                              </div>
+
+
+                                          </div>
+                                      </div>
+                                      <div class="form-inline">
+                                          <label for="addAnotherProperty">Want to ADD another Property unit:</label>
+                                          <select class="form-control frm-dropdown" id="addAnotherProperty">
+                                              <option>Yes</option>
+                                              <option>No</option>
+                                          </select>
+                                        
+                                      </div>
+
+                                  </div>
+
+                                  <div class="form-navigation pull-right">
+                                      <button type="button" class="btn btn-previous ">Previous</button>
+                                      <button type="button" class="btn btn-next ">Next</button>                                   
+                                      <p class="">Be ready for awesome buisiness experience!</p>
+                                  </div>
+                                  
+                              </fieldset>
+
+                              <!-- page 3rd -->
+                              <fieldset class="features">
+                                  <h5>Amenities:</h5>
+                                  <p class="sub">Select following Amenities of Project</p>
+                                  <div class="amenities">   
+                                      <div class="img-checkbox">
+                                          <input type='checkbox' name='amenities' value='security' id="security"/>
+                                          <label for="security"><img src="img/security.png" alt="security img"></label>
+                                      </div>
+                                      <div class="img-checkbox">
+                                          <input type='checkbox' name='amenities' value='vastu' id="vastu"/>
+                                          <label for="vastu"><img src="img/security.png" alt="security img"></label>
+                                      </div>
+                                      <div class="img-checkbox">
+                                          <input type='checkbox' name='amenities' value='security3' id="maintenance"/>
+                                          <label for="maintenance"><img src="img/security.png" alt="security img"></label>
+                                      </div>
+                                  </div>
+                                  <div class="form-inline extraAmn">
+                                      <label for="cityLocality">Write Extra amenties: </label>
+                                      <input type="text" class="form-control" id="cityLocality">
+                                      <a href="#"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+                                  </div>
+                                  
+
+                                  <div class="interior-exterior">
+                                      <p>Add interior & Exterior: <span class="inline-example ">eg.Toilets:Verified Flooring. Exaust fan. </span></p>
+                                      <div class="main-block">
+                                          <div class="label">
+                                              <input type="text"  class="form-control" id="cityLocality" placeholder="Label">
+                                          </div>
+                                          <div class="input-box">
+                                              <input type="text"  class="form-control" id="cityLocality" ">
+                                              <input type="text"  class="form-control" id="cityLocality" ">
+                                          </div>  
+                                          <div class="plus-button">
+                                              <a href="#"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+                                          </div>                                      
+                                      </div>  
+                                      <a href="#" class="addMoreIE"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add More interior & Exterior</a>                                 
+
+                                  </div>
+                                  
+
+                                  <div class="approved-banks">
+                                      <h5>Loan Approved Banks:</h5>
+                                      <p>Select following loan approved banks of project.</p>
+
+                                      <div class="banks">   
+                                          <div class="bank-checkbox">
+                                              <input type='checkbox' name='banks' value='Allahbad' id="Allahbad"/>
+                                              <label for="Allahbad">Allahbad Bank</label>
+                                          </div>   
+                                          <div class="bank-checkbox">
+                                              <input type='checkbox' name='banks' value='Andhra' id="Andhra"/>
+                                              <label for="Andhra">Andhra Bank</label>
+                                          </div>   
+                                          <div class="bank-checkbox">
+                                              <input type='checkbox' name='banks' value='IDBI' id="IDBI"/>
+                                              <label for="IDBI">IDBI Bank</label>
+                                          </div>   
+                                          <div class="bank-checkbox">
+                                              <input type='checkbox' name='banks' value='Axis' id="Axis"/>
+                                              <label for="Axis">Axis Bank</label>
+                                          </div>   
+                                          <div class="bank-checkbox">
+                                              <input type='checkbox' name='banks' value='Baroda' id="Baroda"/>
+                                              <label for="Baroda">Bank of Baroda</label>
+                                          </div>   
+                                          <div class="bank-checkbox">
+                                              <input type='checkbox' name='banks' value='Indiabulls' id="Indiabulls"/>
+                                              <label for="Indiabulls">Indiabulls</label>
+                                          </div>
+
+                                      </div>
+                                  </div>
+
+                                  <div class="form-navigation pull-right">
+                                      <button type="button" class="btn btn-previous ">Previous</button>
+                                      <button type="button" class="btn btn-next ">Next</button>                                   
+                                      <p class="">Be ready for awesome buisiness experience!</p>
+                                  </div>    
+                              </fieldset>
+                              <!-- Locations -->
+                              <fieldset class="location">
+                                  <h5>Where is the project Located:</h5>
+                                  <div class="detailLocation">
+                                      
+                                      <div class="form-inline">
+                                          <label for="completeAddress">Complete site Address: </label>
+                                          <input type="text" class="form-control" id="completeAddress">
+                                      </div>
+                                  </div>
+
+                                  <div class="advantages">
+                                      <label>Advantages of location: <span class="inline-example ">eg.Restaurant nearby:Paradise biryani point 1.2km, Indian paratha 2.8km.</span></label>
+                                      <div class="main-block">
+                                          <div class="label">
+                                              <input type="text"  class="form-control" id="cityLocality" placeholder="Label">
+                                          </div>
+                                          <div class="input-box">
+                                              <input type="text"  class="form-control" id="cityLocality" ">
+                                          </div>                                    
+                                      </div> 
+                                      <a href="#" class="addMoreIE"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add More </a>   
+                                  </div>
+
+
+                                  <div class="site-map-img">
+                                      <div class="site-img">
+                                          <label for="">Add floor Plan image : </label>
+                                          <div class="project-photo-with-tag">
+                                              <div class="project-photo-uploader">
+                                                  <input type="file" class="form-control" >
+                                                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                  <span>+Add photo</span>
+                                              </div>                                        
+                                          </div> 
+                                      </div> 
+                                      <span class="nextline-example">Because of location map image customer do find address easily.</span>                                    
+                                  </div>
+
+                                  <div class="map-location">
+                                     <label for="map">Tag your property on the goole map and make it easily searchable:</label>
+
+                                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15267817.506069222!2d73.75787202107921!3d20.8924153735958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sus!4v1495157501786" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                      <button type="button" class="btn btn-primary pull-right btn-saveLocation ">Save Project Location</button>
+                                  </div>
+                                  <div class="projectVideo">
+                                      <h5>Project Video:</h5>
+                                      <span class="sub">Give buyers a tour of your property video on YouTube.</span>
+                                      <div class=" youtubeUrl">                                        
+                                          <label for="videoUrl">Youtube Link:</label>
+                                          <input type="url"  class="form-control" id="videoUrl" >
+                                      </div>
+                                  </div>
+                                  <div class="aboutBuilder">
+                                      <h5>About Builder:</h5>
+                                      <div class="form-inline">
+                                          <label for="completedProjects">Total completed Projects:</label>
+                                          <input type="url"  class="form-control" id="completedProjects" >
+                                      </div>
+                                      <div class="form-inline">
+                                          <label for="youTubeUrl">Total Ongoing Projects:</label>
+                                          <input type="url"  class="form-control" id="youTubeUrl" name="">
+                                      </div>
+
+                                      <label class="textarea-label">Give us some information about your company : </label>
+                                      <textarea name="companyInfo" id="" cols="75" rows="9"></textarea>
+
+                                  </div>
+
+                                  <div class="thankYou">
+                                      <h3>Thank You!</h3>
+                                      <p>We will take care of your customers.. <br>& you will fall in love <span class="red">Builders</span><span class="black">Time</span></p>
+                                  </div>
+
+                                  <div class="form-navigation pull-right">
+                                      <button type="button" class=" btn-previous ">&#60; Previous</button>
+                                      <button type="button" class=" btn-submit">Submit</button>   
+                                  </div> 
+                              
+                                  
+                              </fieldset>
+                      
+                          </form>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+
+      </div>    
+     <!-- END Builder form -->
     <hr>
     <!-- START FOOTER -->
     <footer>
@@ -708,7 +1230,7 @@
                 <div class="col-md-3">
                     <img src="img/helmet.png" alt="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 nopadding-right  ">
                     <div class="footer-info">
                         <h2>Why <span class="red">Builders</span><span class="black">Time</span>.com?</h2>
                         <p>Website made by Builders team to get true information & offers directly from Builders</p>
@@ -746,8 +1268,14 @@
     <script src="vendor/js/jquery.magnific-popup.min.js"></script>
     <script src="vendor/js/jquery-ui.min.js"></script>
     <script src="js/search-page.js"></script>
+    <script src="js/buildersForm.js"></script>
+
     <!-- GOOGLE MAPS SETTING JS -->
     <script src="js/google-maps.js"></script>
+    <!-- GOOGLE MAP LIABRARY CDN -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOell7tuOKPu75RHP6FQGKEWz6TQE5_JM&callback=initMap"
+        async defer></script>
+
 </body>
 
 </html>
